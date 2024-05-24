@@ -1,0 +1,16 @@
+---
+const user = Astro.locals.user;
+import ErrorAuthComponent from "@/components/auth/ErrorAuthComponent";
+import MainLayout from "../MainLayout.astro";
+---
+<MainLayout>
+{user ? (
+  <div class="w-full h-screen flex place-items-center">
+    <ErrorAuthComponent/>
+  </div>
+    ) : (
+  <slot />
+    )
+}
+
+</MainLayout>

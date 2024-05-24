@@ -1,0 +1,25 @@
+---
+import PDF from '@/components/test/todo.jsx'; // added file extension
+---
+
+<PDF client:load />
+
+<script is:inline>
+  var livepreview = document.getElementById('livepreview');
+  var config = document.querySelector('#config');
+
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      var height = config?.clientHeight;
+      console.error(height);
+      console.error(livepreview);
+      livepreview.style.transform = `scale(${height / 842})`;
+    }, 500);
+  });
+
+  window.addEventListener('resize', function () {
+    var height = config?.clientHeight;
+    // console.error(height);
+    livepreview.style.transform = `scale(${height / 842})`;
+  });
+</script>

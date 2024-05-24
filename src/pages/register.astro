@@ -1,0 +1,10 @@
+---
+import UnloggedUsersLayout from "@/layouts/permissionLayouts/UnloggedUsersLayout.astro"
+import AuthForm from "@/components/auth/AuthFormComponent"
+
+---
+<UnloggedUsersLayout>
+    <div class="w-full h-screen flex place-items-center">
+        <AuthForm variants="register" client:load/>
+    </div>
+</UnloggedUsersLayout>

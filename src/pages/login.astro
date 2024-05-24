@@ -1,0 +1,11 @@
+---
+import UnloggedUsersLayout from "@/layouts/permissionLayouts/UnloggedUsersLayout.astro";
+import FormLogin from "@/components/auth/AuthFormComponent"
+import { Toast } from "@/components/auth/AuthToast"
+---
+<UnloggedUsersLayout>
+    <div class="w-full h-screen flex place-items-center">
+        <FormLogin variants="login" client:load/>
+        <Toast client:load />
+    </div>
+</UnloggedUsersLayout>

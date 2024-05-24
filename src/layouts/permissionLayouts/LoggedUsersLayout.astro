@@ -1,0 +1,21 @@
+---
+const user = Astro.locals.user;
+import AuthForm from "@/components/auth/AuthFormComponent"
+import AppLayout from "../AppLayout.astro";
+import MainLayout from "../MainLayout.astro";
+
+---
+{
+  user ? (
+    <AppLayout>
+      <slot />
+    </AppLayout>
+    ) : (
+        <MainLayout>
+        <div class="w-full h-screen flex place-items-center">
+          <AuthForm variants="login" client:load/>
+          </div>
+          </MainLayout>
+          )
+        }
+  <style>

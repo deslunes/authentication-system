@@ -1,0 +1,11 @@
+---
+import LoggedUsersLayout from "../layouts/permissionLayouts/LoggedUsersLayout.astro";
+---
+    <LoggedUsersLayout>
+      <div class="flex flex-col gap-2">
+        <form method="POST" action="/api/logout">
+          <button class="underline">Log out</button>
+        </form>
+        <h1>Page protégée par le système d'authentification</h1>
+      </div>
+    </LoggedUsersLayout>
